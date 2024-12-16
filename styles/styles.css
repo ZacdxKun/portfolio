@@ -50,14 +50,13 @@ header h1 {
     align-items: center;
     white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
     overflow: hidden; /* Cache le texte qui dépasse */
-    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte qui dépasse */
     font-size: 1.5rem; /* Ajuste la taille du texte */
 }
 
 header h1 a {
     margin-right: 1rem;
     color: #333;
-    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte qui dépasse */
+    
 }
 
 header nav {
@@ -158,23 +157,27 @@ header nav ul li a:hover {
     color: #fff;
 }
 
-/* Profile Section */
+/* Section Profil */
+#sectionProfil {
+    background: #fff;
+    padding: 5rem 2rem;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
 #sectionProfil .GlassBackground {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Permet de centrer le conteneur */
+    text-align: left; /* Réinitialise l'alignement du texte à gauche à l'intérieur du conteneur */
+    border: 1px solid #000; /* Ajoute une fine bordure noire */
+    padding: 2rem; /* Ajoute du padding pour l'espacement interne */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    max-width: 800px; /* Limite la largeur maximale du conteneur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre portée */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    background: rgba(255, 255, 255, 0.8); /* Fond transparent */
 }
 
-#sectionProfil h2 {
-    margin-bottom: 1rem;
-    color: #3498db;
-}
-
-#sectionProfil p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+#sectionProfil h1, #sectionProfil h2, #sectionProfil p {
+    margin: 1rem 0; /* Ajoute de la marge verticale */
 }
 
 /* Skills Section */
@@ -305,6 +308,47 @@ header nav ul li a:hover {
     line-height: 1.6;
     margin-bottom: 1rem;
     color: #333;
+}
+
+
+/* Section Etude */
+#sectionEtude {
+    background: #fff;
+    padding: 5rem 2rem;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+#sectionEtude .container_bts_sio {
+    display: inline-block; /* Permet de centrer le conteneur */
+    text-align: left; /* Réinitialise l'alignement du texte à gauche à l'intérieur du conteneur */
+    border: 1px solid #000; /* Ajoute une fine bordure noire */
+    padding: 2rem; /* Ajoute du padding pour l'espacement interne */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    max-width: 800px; /* Limite la largeur maximale du conteneur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre portée */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+}
+
+#sectionEtude h2, #sectionEtude h3, #sectionEtude h4, #sectionEtude h5, #sectionEtude p, #sectionEtude ul {
+    margin: 1rem 0; /* Ajoute de la marge verticale */
+}
+
+#sectionEtude ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0;
+}
+
+#sectionEtude ul li {
+    margin-bottom: 0.5rem; /* Ajoute de la marge inférieure aux éléments de la liste */
+    padding-left: 1.5rem; /* Ajoute du padding à gauche pour l'indentation */
+    position: relative; /* Nécessaire pour l'icône personnalisée */
+}
+
+#sectionEtude ul li::before {
+    content: '•'; /* Utilise un point comme puce personnalisée */
+    position: absolute;
+    left: 0;
+    color: #3498db; /* Couleur de la puce */
 }
 
 /* Media Queries */
