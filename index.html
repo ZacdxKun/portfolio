@@ -7,8 +7,7 @@
         <title>Portfolio de Zacharie Devouche</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="styles/styles.css">
-    </head>
-    <body>
+        <script src="js/app.js" defer></script>
         <header>
             <nav>
                 <h1>
@@ -18,26 +17,31 @@
                 </h1>
                 <ul id="menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#sectionProjet">Mes Projets</a></li>
-                    <li><a href="#sectionEtude">BTS SIO</a></li>
                     <li><a href="#sectionProfil">Mon Profil</a></li>
+                    <li><a href="#sectionEtude">BTS SIO</a></li>
+                    <li><a href="#sectionProjet">Mes Projets</a></li>
                     <li><a href="#sectionVeille">Veille</a></li>
                 </ul>
             </nav>
         </header>
+    </head>
+    <body>
+       
         <main>
-            <section id="Introduction">
-                <h1>Bonjour, je suis <br> Zacharie Devouche <br> <br>Développeur FullStack <br> Première Année de BTS SIO SLAM</h1>
+            <section id="Introduction" class="section">
+                <h1>Bonjour, je suis <br> Zacharie Devouche <br> <br>Développeur FullStack <br> Deuxième Année de BTS SIO SLAM</h1>
                 <div class="btn_display">
                     <a class="btn" href="img/CV FINAL.pdf" target="_blank">Mon CV</a>
                     <a class="btn" href="#sectionProfil">Mes informations</a>
+                    <a class="btn" href="BTS SIO- Tableau de synthese - Epreuve E4 .pdf" >Tableau de synthèse</a>
                 </div>
             </section>
             <section id="sectionProfil" class="section">
                 <div class="GlassBackground">
                     <h1>Profil</h1>
                     <h2>Présentation :</h2>
-                    <p>Actuellement étudiant en première année d'un BTS SIO SLAM à l'école IPSSI Paris. Toujours en cours d'étude, je vous propose sur ce portfolio de retrouver ci-dessous mon parcours d'étude et les différents projets professionnels que j'ai pu entreprendre au sein de ma carrière. Je suis actuellement à la recherche d'une alternance à compter de septembre. Je suis intéressé par le développement web et suis en constante recherche de nouvelles technologies et de nouvelles méthodes de développement.</p>
+                    <p>Actuellement étudiant en deuxième année d'un BTS SIO SLAM à l'école IPSSI Paris. Toujours en cours d'étude, je vous propose sur ce portfolio de retrouver ci-dessous mon parcours d'étude et les différents projets professionnels que j'ai pu entreprendre au sein de ma carrière. Je suis actuellement à la recherche d'un stage à compter de janvier . Je suis intéressé par le développement web et suis en constante recherche de nouvelles technologies et de nouvelles méthodes de développement.</p>
+                    <p>J'envisage par la suite de poursuivre ma formation en bachelor Dev FullStack. Ce diplôme me permettra d'acquérir les compétences nécessaires pour exercer un métier de développeur informatique dans le domaine du développement web.</p>
                     <h2>Compétences acquises:</h2>
                     <div class="skills-container">
                         <img class="skills" src="https://cdn-icons-png.flaticon.com/512/732/732212.png" >
@@ -93,22 +97,7 @@
                     </div>
                 </div>
             </section>
-            <section id="sectionVeille" class="section">
-                <h1 class="titre centre">Veilles Technologiques</h1>
-                <div class="section-container">
-                    <h3>Voici les différentes veilles technologiques que j'ai pu réaliser pendant mon parcours au sein de l'IPSSI.</p></h3>
-                    <div class="project">
-                        <h2 class="veille-title">Apple Vision Pro</h2>
-                        <p>Plongez dans l'avenir avec l'Apple Vision Pro, une révolution technologique qui redéfinit la réalité augmentée. Grâce à une fusion parfaite de puissance et d'élégance, l'Apple Vision Pro transforme votre perception du monde, offrant une expérience immersive sans précédent et repoussant les limites de l'innovation</p>
-                        <a href="https://testipformation-my.sharepoint.com/:p:/g/personal/z_devouche_ecole-ipssi_net/Eel5z4SRH_ZApnRuVR-0wIwBlh1BkH82F53JsOYmKtGs5Q?e=viFjzG" target="_blank"><img src="img/apple.png"></a>
-                    </div>
-                    <div class="project">
-                        <h2 class="veille-title">A venir...</h2>
-                        
-                    </div>
-                    
-                </div>
-            </section>
+           
             <section id="sectionProjet" class="section">
                 <h1 class="titre">Projets</h1>
                 <div class="project-container">
@@ -129,6 +118,28 @@
                     </div>
                 </div>
             </section>
+            <section id="sectionVeille" class="section">
+                <h1 class="titre centre">Veilles Technologiques</h1>
+                <div class="section-container">
+                    <div class="project">
+                        <h2 class="veille-title">Apple Vision Pro</h2>
+                        <p class="project-description">Plongez dans l'avenir avec l'Apple Vision Pro, une révolution technologique qui redéfinit la réalité augmentée. Grâce à une fusion parfaite de puissance et d'élégance, l'Apple Vision Pro transforme votre perception du monde, offrant une expérience immersive sans précédent et repoussant les limites de l'innovation.</p>
+                        <a href="https://testipformation-my.sharepoint.com/:p:/g/personal/z_devouche_ecole-ipssi_net/Eel5z4SRH_ZApnRuVR-0wIwBlh1BkH82F53JsOYmKtGs5Q?e=viFjzG" target="_blank">
+                            <img src="img/apple.png" alt="Apple Vision Pro">
+                        </a>
+                    </div>
+                    <div class="project">
+                        <h2 class="veille-title">A venir...</h2>
+                    </div>
+                </div>
+            </section>
+            <section id="sectionDocumentation" class="section">
+                <h1 class="titre">Documentations</h1>
+                <div class="documentations">
+                    <a class="btn" href="Doc GLPI.pdf" target="_blank">GLPI</a>
+                    <a class="btn" href="Diagramme de GANTT.png" target="_blank">Ap2 Diagramme Gantt</a>
+                    <a class="btn" href="https://www.youtube.com/watch?v=Wmke1jFfRQQ" target="_blank">Feedly</a>
+                </div>
         </main>
         
     </body>

@@ -1,316 +1,340 @@
+/* Global Styles */
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    background: white;
-    color: black;
+    background: #f0f0f0;
+    color: #333;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-#menu {
-    width: 25%;
-    padding-left: 2rem;
-    font-size: 20px;
-    font-weight: bold;
-}
-#menu:hover {
-    color: #3498DB;
-}
 a {
     text-decoration: none;
-    color: black;
+    color: #3498db;
+    transition: color 0.3s;
 }
 
-h2, h3 {
-    margin-block-start: 0;
-    margin-block-end: 0;
+a:hover {
+    color: #2980b9;
 }
 
-main {
-    width: 100vw;
-    height: 100vw;
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Header */
 header {
     position: fixed;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    background-color: transparent;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-header a {
-    color: black;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond transparent */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    padding-bottom: 2rem;;
+    overflow: hidden; /* Assure que le contenu ne déborde pas */
+    backdrop-filter: blur(10px); /* Ajoute un effet de flou pour le fond */
 }
 
 header h1 {
     display: flex;
-    flex-direction: row;
-    margin-left: 10px;
+    align-items: center;
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte qui dépasse */
+    font-size: 1.5rem; /* Ajuste la taille du texte */
 }
 
 header h1 a {
-    margin-left: 1.5rem;
+    margin-right: 1rem;
+    color: #333;
+    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte qui dépasse */
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.6px);
-    -webkit-backdrop-filter: blur(9.6px);
+    width: 100%;
+    overflow: hidden; /* Assure que le contenu ne déborde pas */
 }
 
 header nav ul {
     display: flex;
-    list-style: none;
+    gap: 1rem;
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte qui dépasse */
+    padding-right: 2rem; /* Ajoute de l'espace à droite */
 }
 
 header nav ul li {
-    margin: 0 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav ul li img {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 header nav ul li a {
-    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte qui dépasse */
 }
 
-header nav ul li a:hover::after {
-    transform: scaleX(1);
+header nav ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
 }
 
-/* Section Intro */
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    margin-top: 5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titre {
+    font-size: 2.5rem;
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.centre {
+    text-align: center;
+}
+
+/* Introduction Section */
 #Introduction {
-    font-size: 30px;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: #fff;
+    text-align: center;
+    padding: 10rem 2rem;
+    border-radius: 0 0 50% 50% / 10%;
 }
 
 #Introduction h1 {
-    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
-#Introduction img {
-    width: 200px;
-    height: 255px;
-    border-radius: 20%;
-    margin-bottom: 20px;
-}
-
-#Introduction input[type="color"] {
-    font-size: 20px;
-    margin: 20px;
-    text-align: center;
-}
-
-/* Section Profil */
-#sectionProfil {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
+#Introduction .btn_display {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    gap: 1rem;
 }
 
+#Introduction .btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#Introduction .btn:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+/* Profile Section */
 #sectionProfil .GlassBackground {
-    padding-top: 2%;
-    padding-bottom: 3%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.6px);
-    -webkit-backdrop-filter: blur(9.6px);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#sectionProfil .GlassBackground h2 {
-    margin-bottom: 20px;
+#sectionProfil h2 {
+    margin-bottom: 1rem;
+    color: #3498db;
 }
 
-#sectionProfil .GlassBackground p {
-    font-size: 20px;
-    margin: 30px;
-    text-align: center;
+#sectionProfil p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
+/* Skills Section */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .skills {
-    padding-right: 50px;
     width: 96px;
     height: 96px;
-    display: inline-block;
+    border-radius: 50%;
+    transition: transform 0.3s;
 }
 
-/* Button Styles */
-.btn {
-    font-weight: bold;
-        margin-right: 10px;
-        background-color: white;
-        border-radius: 25px;
-        border-style: none;
-        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
-        box-sizing: border-box;
-        cursor: pointer;
-        font-size: 14px;
-        display: inline-block;
-        padding: 5px 24px;
-        border-radius: 5px;
-        background-color: #3498DB;
-        border-bottom: 5px solid #2980B9;
-        transition: all 0.1s;
-        padding: 10px 50px;
-        font-size: 16px;
+.skills:hover {
+    transform: scale(1.1);
 }
 
-.btn:active {
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    border-bottom: 1px solid;
-}
-
-.btn:hover {
-    background-color: #2980B9;
-}
-
-/* Section BTS SIO */
-#sectionEtude {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-    text-align: center;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.6px);
-    -webkit-backdrop-filter: blur(9.6px);
-}
-
-#sectionEtude .options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.option {
-    font-size: 20px;
-    border-radius: 25px;
-    width: 509px;
-    padding: 30px;
-    margin: 20px 0px;
-    text-align: start;
-}
-.adjust{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-/* Section Veille */
-#sectionVeille {
-    width: 100vw;
-    height: 100vh;
-}
-
-.section-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 30px;
-    margin: 50px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.6px);
-    -webkit-backdrop-filter: blur(9.6px);
-}
-
-.section-container div {
-    text-align: center;
-    margin: 10px;
-}
-
-
-
-/* Section Projet */
+/* Projects Section */
 #sectionProjet {
-    width: 100vw;
-    height: 100vh;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 5rem 2rem;
 }
 
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .project {
-    font-weight: bold;
-    border-radius: 25px;
-    width: 300px;
-    padding: 20px;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
     text-align: center;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.6px);
-    -webkit-backdrop-filter: blur(9.6px);
+}
+
+.project:hover {
+    transform: translateY(-10px);
 }
 
 .project img {
     max-width: 100%;
-    height: auto;
+    max-height: 200px; /* Limite la hauteur des images */
+    object-fit: cover; /* Maintient les proportions des images */
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
+
 .project img:hover {
     transform: scale(1.1);
 }
-/* Footer */
 
-.titre {
-    padding-top: 2rem;
-    
-    font-size: 60px;
+/* Documentation Section */
+#sectionDocumentation .documentations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.centre{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
 
+#sectionDocumentation .btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
-img{
-    border-radius: 1rem;
+
+#sectionDocumentation .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Veille Section */
+#sectionVeille {
+    background: #f8f9fa;
+    padding: 5rem 2rem;
+}
+
+.section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.veille-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem; /* Réduit la taille du texte pour les petits écrans */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Change la direction des éléments de navigation */
+        gap: 0.5rem;
+        padding-right: 1rem; /* Ajuste l'espace à droite pour les petits écrans */
+    }
+
+    header nav ul li a {
+        padding: 0.5rem; /* Réduit le padding pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem; /* Réduit encore la taille du texte pour les très petits écrans */
+    }
+
+    header nav ul {
+        gap: 0.25rem;
+        padding-right: 0.5rem; /* Ajuste l'espace à droite pour les très petits écrans */
+    }
+
+    header nav ul li a {
+        padding: 0.25rem; /* Réduit encore le padding pour les très petits écrans */
+    }
 }
