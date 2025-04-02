@@ -164,10 +164,10 @@ header nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('img/moi.jpg') no-repeat center;
+    background: url('../img/moi.jpg') no-repeat center; /* Ajustez selon la structure de votre repo */
     background-size: cover;
-    opacity: 0.15; /* Ajuste l'opacité pour que la photo se mélange au background */
-    filter: blur(10px); /* Ajoute un flou pour un meilleur mélange */
+    opacity: 0.15;
+    filter: blur(10px);
     z-index: 1;
 }
 
