@@ -123,18 +123,63 @@ header nav ul li a:hover {
     text-align: center;
 }
 
-/* Introduction Section */
+/* Introduction Section with Profile Image */
 #Introduction {
     background: linear-gradient(135deg, #3498db, #8e44ad);
     color: #fff;
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 10rem 2rem 5rem;
     border-radius: 0 0 50% 50% / 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+#Introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('img/moi.jpg') no-repeat center;
+    background-size: cover;
+    opacity: 0.15; /* Ajuste l'opacité pour que la photo se mélange au background */
+    filter: blur(10px); /* Ajoute un flou pour un meilleur mélange */
+    z-index: 1;
+}
+
+#Introduction h1, #Introduction .btn_display {
+    position: relative;
+    z-index: 2; /* S'assure que le texte est au-dessus de l'image de fond */
 }
 
 #Introduction h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ajoute une ombre au texte pour une meilleure lisibilité */
 }
 
 #Introduction .btn_display {
